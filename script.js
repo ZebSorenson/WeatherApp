@@ -17,20 +17,23 @@ document.getElementById("weatherSubmit").addEventListener("click", function(even
     return;
   let results = "";
   /*global json*/
-      results += '<h2>Weather in ' + json.name + "</h2>";
+      
+      
+      results += '<h2>Below Are the Results for ' + json.name + "</h2>";
       for (let i=0; i < json.weather.length; i++) {
 	results += '<img src="http://openweathermap.org/img/w/' + json.weather[i].icon + '.png"/>';
       }
       results += '<h2>' + json.main.temp + " &deg;F</h2>"
       results += "<p>"
       for (let i=0; i < json.weather.length; i++) {
-	results += json.weather[i].description
-	if (i !== json.weather.length - 1)
-	  results += ", "
+	      results += json.weather[i].description
+	        if (i !== json.weather.length - 1)
+	        results += ", "
       }
-      results += "</p>";
-      document.getElementById("weatherResults").innerHTML = results;
-      console.log(json);
+      
+        results += "</p>";
+       document.getElementById("weatherResults").innerHTML = results;
+       console.log(json);
       
     });
     
@@ -46,14 +49,42 @@ document.getElementById("weatherSubmit").addEventListener("click", function(even
         
 	forecast += "<h2>" + moment(json.list[i].dt_txt).format('MMMM Do YYYY, h:mm:ss a') + "</h2>";
 	forecast += "<p>Temperature: " + json.list[i].main.temp + "</p>";
+	
+	
+	forecast += "<p>Feels Like: " + json.list[i].main.feels_like + "</p>";
+		
+		forecast += "<p>The humidity is currently: " + json.list[i].main.humidity+ "</p>";
+		forecast += "<p>The max temp is: " + json.list[i].main.temp_max + "</p>" +"<p>The min temp is: " + json.list[i].main.temp_min + "</p>" ;
+	
+	
 	forecast += '<img src="https://openweathermap.org/img/w/' + json.list[i].weather[0].icon + '.png"/>'
       }
       document.getElementById("forecastResults").innerHTML = forecast;
     });
+    
+    
+    /*Between Here*/
+    
+    
+    
+    
+   
+    
+    
+    /*Between Here*/
+    
       
  
     });
 
 /*global value*/
+
+
+
+
+
+
+
+
 
 
