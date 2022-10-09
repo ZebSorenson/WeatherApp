@@ -1,1 +1,51 @@
+body {
+  background-color: beige;
+}
+h1 {
+  color: black;
+  text-align: center;
+}
+form{
+  
+text-align: center
+}
+
+button{
+  size: 700 px;
+}
+
+footer{
+  
+  position:fixed;
+ bottom:0;
+ left:0;
+ 
+ font-size: 200%;
+ 
+}
+
+
+
+
+.menu-container {
+   /* Blue */
+  
+   display: center;
+   justify-content: left; 
+     background-image: url("https://live.staticflickr.com/5105/5610338096_f6a39cbd25_z.jpg");
+   
+}
+
+
+.menu {
+  
+ 
+  display: center;
+  justify-content: space-around;
+}
+
+
+
+
+
 
